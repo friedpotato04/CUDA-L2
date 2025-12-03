@@ -19,7 +19,7 @@ CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinfor
 <div align="center">
   <img src="assets/benchmark_comparison.png" width="90%" alt="Evaluation Results">
   <br>
-  <em>Comparing CUDA-L2 against torch.matmul, cuBLAS, cuBLASLt-heuristic, and cuBLASLt-AutoTuning on A100.</em>
+  <em>Speedup of CUDA-L2 over torch.matmul, cuBLAS, cuBLASLt-heuristic, and cuBLASLt-AutoTuning on A100.</em>
 </div>
 
 <br>
@@ -27,7 +27,7 @@ CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinfor
 <div align="center">
   <img src="assets/table.png" width="90%" alt="Evaluation Results">
   <br>
-  <em>Main comparison results on A100.</em>
+  <em>Speedup comparison results on A100.</em>
 </div>
 
 
