@@ -48,8 +48,7 @@ A: Ideally, kernels trained on A100 should only be used on A100. They might have
 
 **Q: What if I need matrix dimensions (M, N, K) not found in your configurations?**
 
-A: 
-1. You can find the nearest neighbor configuration (larger than yours) and pad with zeros.
+A: 1. You can find the nearest neighbor configuration (larger than yours) and pad with zeros.
 2. Feel free to post your dimensions on GitHub issues. We are happy to release kernels for your configuration.
 
 
