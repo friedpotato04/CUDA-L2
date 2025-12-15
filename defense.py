@@ -41,7 +41,7 @@ def defend_against_thread_injection(
 def defend_against_stream_injection(
     kernel: Callable,
     *args,
-    ratio_threshold: float = 2.0,
+    ratio_threshold: float = 1.5,
     **kwargs
 ) -> Tuple[bool, str, Any, Optional[float]]:
     """
@@ -352,8 +352,8 @@ def test_thread_injection():
         return out
     
     # Setup
-    A = torch.randn(1000, 1000).cuda()
-    B = torch.randn(1000, 1000).cuda()
+    A = torch.randn(10000, 10000).cuda()
+    B = torch.randn(10000, 10000).cuda()
     torch.cuda.synchronize()
     
     print("=" * 50)
@@ -420,8 +420,8 @@ def test_lazy_evaluation():
         return LazyMatmul(A, B)
     
     # Setup
-    A = torch.randn(1000, 1000).cuda()
-    B = torch.randn(1000, 1000).cuda()
+    A = torch.randn(10000, 10000).cuda()
+    B = torch.randn(10000, 10000).cuda()
     torch.cuda.synchronize()
     
     print("=" * 50)
@@ -448,8 +448,8 @@ def test_precision_downgrade():
         return torch.matmul(A.half(), B.half())  # Downgrade to float16
     
     # Setup (float32 inputs)
-    A = torch.randn(1000, 1000).cuda()
-    B = torch.randn(1000, 1000).cuda()
+    A = torch.randn(10000, 10000).cuda()
+    B = torch.randn(10000, 10000).cuda()
     torch.cuda.synchronize()
     
     print("=" * 50)
@@ -509,8 +509,8 @@ def test_run_all_defenses():
     """Test run_all_defenses with legitimate and various malicious kernels."""
     
     # Setup
-    A = torch.randn(1000, 1000).cuda()
-    B = torch.randn(1000, 1000).cuda()
+    A = torch.randn(10000, 10000).cuda()
+    B = torch.randn(10000, 10000).cuda()
     torch.cuda.synchronize()
     
     print("=" * 60)
